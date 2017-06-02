@@ -1,0 +1,10 @@
+pre{
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.015em;
+    line-height: 120%;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.codehilite{
+    background: #272822;
+}
