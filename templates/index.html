@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+    {% for article in articles %}
+        <section class="post">
+            <header>
+                <h2 class="post-title"><a href='#'>{{ article.title }}</a></h2>
+                <p class="post-meta">
+                <a class="post-category post-category-js" href="#">{{ article.cat }}</a>
+                Time: {{ article.time }}
+                阅读次数：{{ article.visited }}
+                </p>
+            </header>
+
+            <div class="post-description">
+                <p>
+                    {{ article.content | truncatechars:100}}
+                </p>
+                <a class="pure-button" href="#">Read More >>> </a>
+            </div>
+        </section>
+    {% endfor %}
+</div><!-- /.blog-post -->
+{% endblock %}
