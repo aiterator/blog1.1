@@ -4,7 +4,7 @@
     {% for article in articles %}
         <section class="post">
             <header>
-                <h2 class="post-title"><a href='#'>{{ article.title }}</a></h2>
+                <h2 class="post-title"><a href='{% url 'get_detail' article.id %}'>{{ article.title }}</a></h2>
                 <p class="post-meta">
                 <a class="post-category post-category-js" href="#">{{ article.cat }}</a>
                 Time: {{ article.time }}
@@ -16,7 +16,7 @@
                 <p>
                     {{ article.content | truncatechars:100}}
                 </p>
-                <a class="pure-button" href="#">Read More >>> </a>
+                <a class="pure-button" href="{% url 'get_detail' article.id %}">Read More >>> </a>
             </div>
         </section>
     {% endfor %}

@@ -19,4 +19,5 @@ from blog.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', Index, name='index'),
+    url(r'^get_detail/(\d+)', Get_detail, name='get_detail'),
 ]
