@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load custom_markdown %} # add markdown
+{% block content %}
+
+<div>
+    <p>{{ links | custom_markdown }}</p>
+</div><!-- /.blog-post -->
+
+{% endblock %}
