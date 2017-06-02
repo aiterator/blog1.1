@@ -2,7 +2,6 @@
 from django.db import models
 from django import forms
 
-# Create your models here.
 class Tag(models.Model):
     #标签
     tag = models.CharField(u'标签', max_length=50)
@@ -52,6 +51,7 @@ class Comment(forms.Form):
         return self.name
 
 class About(models.Model):
+    #关于
     content = models.TextField(u'内容')
     def __str__(self):
         return self.content
