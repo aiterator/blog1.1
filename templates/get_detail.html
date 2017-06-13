@@ -4,7 +4,7 @@
 <div>
     <section class="post">
         <header>
-            <h2 class="post-title">{{ article.title }}</h2>
+            <h2 class="post-title"><a href="{% url 'get_detail' article.id %}">{{ article.title }}</a></h2>
             <p class="post-meta">
                 <a class="post-category post-category-js" href="#">{{ article.cat }}</a>
                 Time:  {{ article.time }}
