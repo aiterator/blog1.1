@@ -38,3 +38,14 @@ def Friend_link(request):
     links = FriendsLink.objects.first()
     return render(request, 'friend_link.html', {'title': '友链', 'links': links})
 
+def Get_all_tags(request):
+    tags_all = Tag.objects.all()
+    tags_all_detail = {}
+    for s in tags_all:
+        tags_all_detail[s] = s.article_set.all().order_by('-time')
+    return render(request, 'get_all_tags.html', {
+        'title': 'tags',
+        'how_many': tags_all.count(),
+        'tags_all_detail': tags_all_detail,
+    })
+

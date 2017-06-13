@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^get_detail/(\d+)', Get_detail, name='get_detail'),
     url(r'^about/', About_me, name='about_me'),
     url(r'^friends_link/', Friend_link, name='friend_link'),
+    url(r'get_all_tags', Get_all_tags, name='get_all_tags'),
 ]
